@@ -34,7 +34,9 @@ body{
     left: 0;
     width: 100%;
     padding: 2rem 9%;
-    background: var(--bg-color);
+    background: var(--bg-color); 
+    /* background-image: url(); 
+    size and position*/
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -170,6 +172,12 @@ section{
     align-items: center;
     gap: 2rem;
     background-color: rgb(8, 1, 49);
+    background-image: url(images/about.jpeg) ;
+    background-size: cover;
+    background-repeat: no-repeat;
+     background-position: center; 
+    background-size: contain;
+    
 }
 
 .heading{
@@ -524,4 +532,12 @@ header.sticky{
         margin-top: 2rem;
     }
 }
-
+.new
+ {
+     align-items: center; 
+     text-align: center;
+     font-weight: 500;
+     font-size: medium;
+    
+    
+}
