@@ -55,9 +55,9 @@
  
   /*======= typed js ===========*/
  const typed = new Typed('.multiple-text', {
-     strings: [ 'Student', 'Teacher', 'Developer' ],
+     strings: [ 'Developer', 'Student' ],
      typeSpeed:100,
      backSpeed:100,
      backDelay:800,
-     loop: true
+     loop: true,
  });
