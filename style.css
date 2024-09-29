@@ -12,7 +12,7 @@
 }
 
 :root{
-    --bg-color:#000004;
+    --bg-color:#00003c;
     --second-bg-color:#fdf7f7;
     --text-color:#f7efef;
     --main-color:rgb(36, 193, 246);
@@ -35,8 +35,6 @@ body{
     width: 100%;
     padding: 2rem 9%;
     background: var(--bg-color); 
-    /* background-image: url(); 
-    size and position*/
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -81,6 +79,10 @@ section{
    display: flex;
    justify-content: center;
    align-items: center; 
+   background-color: rgba(0, 0, 0, 0.5);
+   background-image: url(images/main.jpeg);
+   background-size: cover;
+
 }
 
 .home-content h3{
@@ -102,9 +104,31 @@ section{
     line-height: 1.3;
 }
 
+.btn{
+    display: inline-block;
+    padding: 1rem 2.8rem;
+    background: var(--main-color);
+    border-radius: 4rem;
+    box-shadow: 0 0 1rem var(--main-color);
+    font-size: 1.6rem;
+    color: var(--second-bg-color);
+    letter-spacing: 0.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.btn:hover{
+    box-shadow: none;
+}
+
 .home-content p{
     font-size: 1.6rem;
+    margin-bottom: 2rem;
 }
+
+
+/*------ about section designer ------*/
 
 .social-media a{
     display: inline-block;
@@ -129,8 +153,8 @@ section{
 }
 
 .home-img img{
-    width: 26vw; 
-    animation: floatImage 3s ease-in-out infinite;
+    width: 15vw; 
+    animation: floatImage 4s ease-in-out infinite;
 }
 
 @keyframes floatImage {
@@ -147,31 +171,53 @@ section{
     }
 }
 
-.btn{
-    display: inline-block;
-    padding: 1rem 2.8rem;
-    background: var(--main-color);
-    border-radius: 4rem;
-    box-shadow: 0 0 1rem var(--main-color);
-    font-size: 1.6rem;
-    color: var(--second-bg-color);
-    letter-spacing: 0.1rem;
-    font-weight: 600;
-    cursor: pointer;
-    transition: 0.3s ease;
+
+.container {
+    display: flex;
+    width: 100%;
+    height: 100vh;
 }
 
-.btn:hover{
-    box-shadow: none;
+
+.left-column, .right-column {
+    flex: 1; /* Makes the columns equal in width */
 }
 
-/*------ about section designer ------*/
+.left-column {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color:black;
+}
+
+.content-center {
+    text-align: center;
+}
+
+.center-image {
+    max-width: 100%;
+    height: auto;
+}
+
+.text-below {
+    margin-top: 10px;
+    font-size: 1.2rem;
+    color: #faf6f6;
+}
+
+.right-column {
+    background-color: #ffffff;
+}
+
+
+
+
 .about{
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 2rem;
-    background-color: rgb(8, 1, 49);
+     background-color: rgb(8, 1, 49); 
     background-size: cover;
    
 }
@@ -185,11 +231,6 @@ h2 span{
     color: var(--main-color);
 }
 
-/* .about-img img{
-    width: 27vw;
-    
-} */
-
 .about-content h2{
     text-align: left;
     line-height: 1.2;
@@ -197,97 +238,110 @@ h2 span{
 
 .about-content h3{
     font-size: 2.6rem;
+    margin-bottom: 20px;
 }
 
 .about-content p{
     font-size: 1.6rem;
     margin: 2rem 0 3rem;
 }
-/* a normal table to show the educational details */
-/* .table-container {
-    background-image: url('https://media.tenor.com/FlDEnkQpK4IAAAAC/shooting-star.gif'); 
-   border-radius: 10px;
-}
 
 
-table {
+.Econtainer {
+    display: flex;
     width: 100%;
-    border-collapse: collapse;
-    margin:  10px, 0;
-}
-th, td {
-    border: 2px solid #ddd;
-    padding: 8px;
-    text-align: left;
-    font-size: larger;
-} */
-.Econtainer{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    align-items: center;
-    gap: 2rem;
-   margin-top: 10px;;
+    height: 10vh;
 }
 
-.Econtainer .E-box{
-    position: relative;
-    border-radius: 1rem;
-    background-color: black;
-    box-shadow: 0 0 1rem var(--bg-color);
-    overflow: hidden;
-    height: 18rem;
-}
-.E-box h5{
-    font-size: 1.3rem;
-    font-weight: 270;
-    margin-top: 2.5rem;
-    text-align: center;
-    align-items: center;
-}
-.E-box h4{
-    font-size: 2rem;
-    margin-top: 2rem;
-    text-align: center;
-    align-items: center;
+.E-boxL, .E-boxR{
+    flex: 1; 
 }
 
-.E-box .E-layer{
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(rgba(0,0,0,0.1), var(--main-color));
+.Econtainer .E-boxL {
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
-    text-align: center;
-    padding: 0 4rem;
-    transform: translateY(100%);
-    transition: 0.5s ease;
+    color: #f0f0f0;
 }
-
-.E-box:hover .E-layer{
-    transform: translateY(0);
-}
-
-
-
-.E-layer p{
-    font-size: 1.3rem;
-    font-weight: 500;
-    margin-top: 20px;
-   
+.Econtainer .E-boxR{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #f0f0f0;
 }
 
 
 /*------- services section designer -----*/
+.slider{
+    height: 350px;
+    width:90%;
+    margin: auto;
+    place-items: center;
+    position: relative;
+    display: grid;
+     overflow: hidden;
+   
+}
+.slider-container{
+    display: flex;
+    width: calc(250px*18);
+    animation: scroll 20s linear infinite;
+    gap: 20px;
+}
+@keyframes scroll{
+    0%{
+        transform: translateX(0);
+
+    }
+    100%{
+        transform: translateX(calc(-250px*9));
+    }
+}
+
+.slider .item{
+   height: 250px;
+   align-items: center;
+   width: 250px;
+   display: flex;
+   text-align: center;
+   background-color: #f0f0f0;
+   padding: 10px;
+   transition: transform 0.3s;
+   
+}
+.skill {
+    align-items: center;
+    padding: 20px;
+    text-align: center;
+
+}
+
+.skill img {
+    width: 180px;
+    height: 50px;
+    margin-bottom: 10px;
+}
+
+.skill p {
+    color: #000000;
+    font-size: 18px;
+}
+
+
+.item:hover {
+    transform: translateY(-20px);
+}
+
+
+
+.services{
+    background-image: url(images/skill.jpeg);
+}
 .services h2{
     margin-bottom: 5rem;
     text-align: center;
 }
-
+/* 
 .services-container{
     display: flex;
     justify-content: center;
@@ -299,7 +353,7 @@ th, td {
 .skills-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 20px; /* Space between boxes */
+    gap: 20px; /* Space between boxes 
     max-width: 800px;
     margin: 0 auto;
 }
@@ -320,7 +374,7 @@ th, td {
 }
 
 .skill-box:hover {
-    transform: scale(1.05); /* Scale effect on hover */
+    transform: scale(1.05); /* Scale effect on hover 
     box-shadow: none;
 }
 
@@ -352,11 +406,13 @@ th, td {
 .services-box p{
     font-size: 1.6rem;
     margin: 1rem 0 3rem;
-}
+} */
+
+
 
 /*------ portfolio section designer --------*/
 .portfolio{
-    background-color: #010144;
+    background-color: var(--bg-color);
 }
 
 .portfolio h2{
@@ -431,6 +487,9 @@ th, td {
 }
 
 /*----- contact section designer -------*/
+.contact{
+    background-color: black;
+}
 .contact h2{
     margin-bottom: 3rem;
     text-align: center;
@@ -563,6 +622,8 @@ header.sticky{
 
     .home{
         flex-direction: column;
+       background: #000004;
+      
     }
 
     .home-content h3{
