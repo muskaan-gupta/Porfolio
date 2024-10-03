@@ -272,48 +272,56 @@ h2 span{
 
 
 /*------- services section designer -----*/
-.slider{
+
+.slider {
     height: 350px;
-    width:90%;
+    width: 90%;
     margin: auto;
-    place-items: center;
-    position: relative;
     display: grid;
-     overflow: hidden;
-   
+    place-items: center;
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap;
+    padding: 10px;
+    scroll-behavior: smooth;
 }
-.slider-container{
+
+
+.slider::-webkit-scrollbar {
+    height: 8px;
+}
+
+.slider::-webkit-scrollbar-thumb {
+    background-color: #888;
+    border-radius: 10px;
+}
+
+.slider::-webkit-scrollbar-track {
+    background-color: #f1f1f1;
+}
+
+.slider-container {
     display: flex;
-    width: calc(250px*18);
-    animation: scroll 20s linear infinite;
     gap: 20px;
 }
-@keyframes scroll{
-    0%{
-        transform: translateX(0);
 
-    }
-    100%{
-        transform: translateX(calc(-250px*9));
-    }
+.slider .item {
+    height: 250px;
+    width: 250px;
+    background-color: #f0f0f0;
+    padding: 10px ;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s;
+    border-radius: 20px;
+    scroll-snap-align: start;
 }
 
-.slider .item{
-   height: 250px;
-   align-items: center;
-   width: 250px;
-   display: flex;
-   text-align: center;
-   background-color: #f0f0f0;
-   padding: 10px;
-   transition: transform 0.3s;
-   
-}
 .skill {
     align-items: center;
-    padding: 20px;
     text-align: center;
-
 }
 
 .skill img {
@@ -327,87 +335,18 @@ h2 span{
     font-size: 18px;
 }
 
-
 .item:hover {
-    transform: translateY(-20px);
+    transform: translateY(-25px);
 }
 
-
-
-.services{
-    background-image: url(images/skill.jpeg);
+.services {
+    background-color: #000000;
 }
-.services h2{
+
+.services h2 {
     margin-bottom: 5rem;
     text-align: center;
 }
-/* 
-.services-container{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 3rem;
-}
-
-.skills-container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px; /* Space between boxes 
-    max-width: 800px;
-    margin: 0 auto;
-}
-
-.skill-box {
-    padding: 10px;
-    text-align: center;
-    border-radius: 10px;
-    transition: transform 0.2s;
-    display: inline-block;
-    padding: 1rem 1rem;
-    background: var(--main-color);
-    box-shadow: 0 0 1rem var(--main-color);
-    color: var(--second-bg-color);
-    font-weight: 600;
-    cursor: pointer;
-  
-}
-
-.skill-box:hover {
-    transform: scale(1.05); /* Scale effect on hover 
-    box-shadow: none;
-}
-
-.services-container .services-box{
-    flex: 1 1 30rem;
-    background: var(--bg-color);
-    padding: 3rem 2rem 4rem;
-    border: 0.2rem solid var(--bg-color);
-    border-radius: 2rem;
-    text-align: center;
-    transition: 0.5s ease;
-}
-
-.services-container .services-box:hover{
-    border-color: var(--main-color);
-    transform: scale(1.02);
-}
-
-.services-box i{
-    font-size: 7rem;
-    color: var(--main-color);
-}
-
-.services-box h3{
-    font-size: 2.6rem;
-    font-weight: 500;
-}
-
-.services-box p{
-    font-size: 1.6rem;
-    margin: 1rem 0 3rem;
-} */
-
 
 
 /*------ portfolio section designer --------*/
@@ -622,7 +561,7 @@ header.sticky{
 
     .home{
         flex-direction: column;
-       background: #000004;
+      background-image: url(images/phonesize.jpg);
       
     }
 
@@ -635,17 +574,12 @@ header.sticky{
     }
 
     .home-img img{
-        width: 70vw;
+        width: 40vw;
         margin-top: 4rem;
     }
 
-    .about{
-        flex-direction: column-reverse;
-    }
-
-    .about img{
-        width: 70vw;
-        margin-top: 4rem;
+    .container{
+        flex-direction: column;
     }
 
     .services h2{
@@ -695,6 +629,7 @@ header.sticky{
         margin-top: 2rem;
     }
 }
+
 .new
  {
      align-items: center; 

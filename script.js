@@ -62,4 +62,13 @@
      loop: true,
  });
 
-
+// Google contact form //
+const scriptURL = 'https://script.google.com/macros/s/AKfycbz4XF894czG_-ghv3xK3y_xWrpIhiXokBnWXaH2ZhGiYCo2bOSqWRbDOHsf7la75x_tjw/exec'
+        const form = document.forms['submit-to-google-sheet']
+      
+        form.addEventListener('submit', e => {
+          e.preventDefault()
+          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response => console.log('Success!', response))
+            .catch(error => console.error('Error!', error.message))
+        })
