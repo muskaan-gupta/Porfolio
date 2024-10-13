@@ -1,4 +1,5 @@
  /*======= toggle icon navbar ===========*/
+
  let menuIcon = document.querySelector('#menu-icon');
  let navbar = document.querySelector('.navbar');
  
@@ -71,4 +72,7 @@ const scriptURL = 'https://script.google.com/macros/s/AKfycbz4XF894czG_-ghv3xK3y
           fetch(scriptURL, { method: 'POST', body: new FormData(form)})
             .then(response => console.log('Success!', response))
             .catch(error => console.error('Error!', error.message))
+
         })
+
+   

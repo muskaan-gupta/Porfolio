@@ -151,9 +151,13 @@ section{
     color: var(--second-bg-color);
     background: var(--main-color);
 }
-
+.home-img{
+    justify-content: center;
+    align-items: center;
+}
 .home-img img{
-    width: 15vw; 
+    width: 23vw; 
+    height: 45vh;
     animation: floatImage 4s ease-in-out infinite;
 }
 
@@ -176,6 +180,7 @@ section{
     display: flex;
     width: 100%;
     height: 100vh;
+  
 }
 
 
@@ -192,6 +197,7 @@ section{
 
 .content-center {
     text-align: center;
+    margin-bottom: 10%;
 }
 
 .center-image {
@@ -305,34 +311,56 @@ h2 span{
     gap: 20px;
 }
 
-.slider .item {
-    height: 250px;
-    width: 250px;
-    background-color: #f0f0f0;
-    padding: 10px ;
-    text-align: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: transform 0.3s;
-    border-radius: 20px;
-    scroll-snap-align: start;
-}
 
 .skill {
-    align-items: center;
-    text-align: center;
+    width: 210px;
+  height: 180px;
+  text-align: center;
+  align-items: center;
+  background: #eef4fb;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  place-content: center;
+  place-items: center;
+  overflow: hidden;
+  transition: transform 0.3s;
+  scroll-snap-align: start;
+  border-radius: 20px;
 }
+.skill::before {
+    content: '';
+    position: absolute;
+    width: 100px;
+    background-image: linear-gradient(180deg, rgb(0, 183, 255), rgb(255, 48, 255));
+    height: 130%;
+    animation: rotBGimg 3s linear infinite;
+    transition: all 0.2s linear;
+  }
+
+  @keyframes rotBGimg {
+    from {
+      transform: rotate(0deg);
+    }
+  
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  .skill::after {
+    content: '';
+    position: absolute;
+    background: #ebf0f7;
+    ;
+    inset: 5px;
+    border-radius: 15px;
+  } 
 
 .skill img {
     width: 180px;
     height: 50px;
+    z-index: 1;
     margin-bottom: 10px;
-}
-
-.skill p {
-    color: #000000;
-    font-size: 18px;
 }
 
 .item:hover {
@@ -561,10 +589,20 @@ header.sticky{
 
     .home{
         flex-direction: column;
-      background-image: url(images/phonesize.jpg);
+        background-color: black;
       
     }
+    .skill{
+        width: 150px;
+        height: 160px;
+    }
 
+    .skill img {
+        width: 110px;
+        height: 35px;
+        z-index: 1;
+        margin-bottom: 10px;
+    }
     .home-content h3{
         font-size: 2.6rem;
     }
@@ -573,13 +611,17 @@ header.sticky{
         font-size: 5rem;
     }
 
-    .home-img img{
-        width: 40vw;
-        margin-top: 4rem;
-    }
-
     .container{
         flex-direction: column;
+        height: auto;
+    }
+    .container .left-column img{
+       width:70%;
+       height: 70%;
+    }
+    .container .right-column{
+        height: 100vh;
+
     }
 
     .services h2{
@@ -616,10 +658,7 @@ header.sticky{
         width: 90vw;
     }
 
-    .about-img img{
-        width: 90vw;
-    }
-
+    
     .footer{
         flex-direction: column-reverse;
     }
@@ -636,6 +675,4 @@ header.sticky{
      text-align: center;
      font-weight: 500;
      font-size: medium;
-    
-    
 }
