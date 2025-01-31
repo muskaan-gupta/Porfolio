@@ -215,9 +215,6 @@ section{
     background-color: #ffffff;
 }
 
-
-
-
 .about{
     display: flex;
     justify-content: center;
@@ -277,95 +274,10 @@ h2 span{
 }
 
 
-/*------- services section designer -----*/
-
-.slider {
-    height: 350px;
-    width: 90%;
-    margin: auto;
-    display: grid;
-    place-items: center;
-    overflow-x: auto;
-    overflow-y: hidden;
-    white-space: nowrap;
-    padding: 10px;
-    scroll-behavior: smooth;
-}
+/*------- skill section designer -----*/
 
 
-.slider::-webkit-scrollbar {
-    height: 8px;
-}
 
-.slider::-webkit-scrollbar-thumb {
-    background-color: #888;
-    border-radius: 10px;
-}
-
-.slider::-webkit-scrollbar-track {
-    background-color: #f1f1f1;
-}
-
-.slider-container {
-    display: flex;
-    gap: 20px;
-}
-
-
-.skill {
-  width: 210px;
-  height: 180px;
-  text-align: center;
-  align-items: center;
-  background: #eef4fb;
-  position: relative;
-  display: flex;
-  justify-content: center;
-  place-content: center;
-  place-items: center;
-  overflow: hidden;
-  transition: transform 0.3s;
-  scroll-snap-align: start;
-  border-radius: 20px;
-}
-.skill::before {
-    content: '';
-    position: absolute;
-    width: 100px;
-    background-image: linear-gradient(180deg,  rgb(47, 21, 197),  rgb(34, 4, 98));
-    height: 130%;
-    animation: rotBGimg 3s linear infinite;
-    transition: all 0.2s linear;
-  }
-
-  @keyframes rotBGimg {
-    from {
-      transform: rotate(0deg);
-    }
-  
-    to {
-      transform: rotate(360deg);
-    }
-  }
-  .skill::after {
-    content: '';
-    position: absolute;
-    background: #ebf0f7;
-    ;
-    inset: 5px;
-    border-radius: 15px;
-  } 
-
-.skill img {
-    width: 160px;
-    height: 100px;
-    z-index: 1;
-    margin-bottom: 10px;
-}
-
-.skill:hover {
-    transform: translateY(-25px);
-}
 
 .services {
     background-color: #000000;
@@ -374,9 +286,66 @@ h2 span{
 .services h2 {
     margin-bottom: 5rem;
     text-align: center;
+} 
+
+.containers {
+    width: 100%;
+    /* Full width */
+    background-color: #ddd;
+    
+    /* Grey background */
 }
 
+.skills {
+    text-align: right;
+    /* Right-align text */
+    padding-top: 10px;
+    /* Add top padding */
+    padding-bottom: 10px;
+    /* Add bottom padding */
+    color: white;
+    font: bolder;
+    
+    /* White text color */
+}
+.python {
+    width: 70%;
+    background-color: #04AA6D;
+}
 
+.js {
+    width: 85%;
+    background-color: #5d81fa;
+}
+.Node-js {
+    width: 60%;
+    background-color: #557606;
+}
+.Ex-js {
+    width: 60%;
+    background-color: #73fb8c;
+}
+.Next-js {
+    width: 40%;
+    background-color: #5d26f6;
+}
+.React {
+    width: 65%;
+    background-color: #5dddfa;
+}
+.mongodb {
+    width: 60%;
+    background-color: #996107;
+}
+.C{
+    width: 80%;
+    background-color: #d41111;
+}
+
+.services p{
+    font-size: large;
+    font-weight: 500;
+}
 /*------ portfolio section designer --------*/
 .portfolio{
     background-color: var(--bg-color);

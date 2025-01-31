@@ -8,6 +8,11 @@ menuIcon.onclick = () => {
   navbar.classList.toggle("active");
 };
 
+function myFunction() {
+  var element = document.body;
+  element.classList.toggle("dark-mode");
+}
+
 /*======= scroll section active line ===========*/
 
 let sections = document.querySelectorAll("section");
