@@ -11,6 +11,30 @@
     scroll-behavior: smooth;
 }
 
+/* Hide the scrollbar track */
+::-webkit-scrollbar {
+  width: 8px; /* Adjust width */
+  background: transparent; /* Transparent background */
+}
+
+/* Style the scrollbar thumb */
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.5); /* Semi-transparent thumb */
+  border-radius: 10px; /* Rounded edges */
+}
+
+/* Hover effect */
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.8);
+}
+
+/* Firefox scrollbar styling */
+* {
+  scrollbar-width: thin; /* Thin scrollbar */
+  scrollbar-color: rgba(255, 255, 255, 0.5) transparent; /* Thumb color and track color */
+}
+
+
 :root{
     --bg-color:#00003c;
     --second-bg-color:#fdf7f7;
@@ -281,71 +305,54 @@ h2 span{
 
 .services {
     background-color: #000000;
+    height: 100vh;
 }
 
 .services h2 {
-    margin-bottom: 5rem;
+    
     text-align: center;
+    height: 25%;
 } 
 
-.containers {
+.slider{
+    display: flex;
+    flex-direction: column;
+    overflow-y: scroll;
+    gap: 20px; 
+    height: 70%;
+}
+
+
+.skill-name {
+    font-size: 20px;
+    font-weight: bold;
+    color: cyan;
+}
+
+.skill-bar {
     width: 100%;
-    /* Full width */
-    background-color: #ddd;
-    
-    /* Grey background */
+    background: #727171;
+    height: 25px;
+    border-radius: 5px;
+    position: relative;
+}
+.icon img {
+    width: 50px;
+    border-radius: 50%;
 }
 
-.skills {
+.skill-fill {
+    height: 100%;
+    background: rgb(35, 163, 50);
     text-align: right;
-    /* Right-align text */
-    padding-top: 10px;
-    /* Add top padding */
-    padding-bottom: 10px;
-    /* Add bottom padding */
-    color: white;
-    font: bolder;
-    
-    /* White text color */
-}
-.python {
-    width: 70%;
-    background-color: #04AA6D;
+    padding-right: 10px;
+    line-height: 25px;
+    font-weight: bold;
+    border-radius: 5px;
+    color: black;
 }
 
-.js {
-    width: 85%;
-    background-color: #5d81fa;
-}
-.Node-js {
-    width: 60%;
-    background-color: #557606;
-}
-.Ex-js {
-    width: 60%;
-    background-color: #73fb8c;
-}
-.Next-js {
-    width: 40%;
-    background-color: #5d26f6;
-}
-.React {
-    width: 65%;
-    background-color: #5dddfa;
-}
-.mongodb {
-    width: 60%;
-    background-color: #996107;
-}
-.C{
-    width: 80%;
-    background-color: #d41111;
-}
 
-.services p{
-    font-size: large;
-    font-weight: 500;
-}
 /*------ portfolio section designer --------*/
 .portfolio{
     background-color: var(--bg-color);
