@@ -566,19 +566,8 @@ header.sticky{
     .home{
         flex-direction: column;
         background-color: black;
-      
     }
-    .skill{
-        width: 150px;
-        height: 160px;
-    }
-
-    .skill img {
-        width: 110px;
-        height: 35px;
-        z-index: 1;
-        margin-bottom: 10px;
-    }
+    
     .home-content h3{
         font-size: 2.6rem;
     }
@@ -600,9 +589,6 @@ header.sticky{
 
     }
 
-    .services h2{
-        margin-bottom: 3rem;
-    }
 
     .portfolio h2{
         margin-bottom: 3rem;
